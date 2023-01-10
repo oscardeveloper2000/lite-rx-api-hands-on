@@ -35,7 +35,7 @@ public class Part02Mono {
 
 	// TODO Create a Mono that emits an IllegalStateException
 	Mono<String> errorMono() {
-		return null;
+		return Mono.error(new IllegalStateException());
 	}
 
 }
