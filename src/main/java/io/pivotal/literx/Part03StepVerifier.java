@@ -19,6 +19,7 @@ package io.pivotal.literx;
 import java.util.function.Supplier;
 
 import io.pivotal.literx.domain.User;
+import org.assertj.core.api.Assertions;
 import reactor.core.publisher.Flux;
 import reactor.test.StepVerifier;
 
@@ -55,7 +56,12 @@ public class Part03StepVerifier {
 	// TODO Use StepVerifier to check that the flux parameter emits a User with "swhite"username
 	// and another one with "jpinkman" then completes successfully.
 	void expectSkylerJesseComplete(Flux<User> flux) {
-		fail();
+
+		StepVerifier
+				.create(flux)
+				.expectNextMatches(user -> user.getUsername().equals("swhite"))
+				.assertNext(user -> Assertions.assertThat(user.getUsername()).isEqualToIgnoringCase("jpinkman"))
+				.verifyComplete();
 	}
 
 //========================================================================================
