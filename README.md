@@ -15,5 +15,5 @@ https://github.com/oscardeveloper2000/lite-rx-api-hands-on.git
 ```
 
 # Resuelto por
-- Valentina Santana Muñoz
+- Valentina Santa Muñoz
 - Oscar Danilo Sanabria
