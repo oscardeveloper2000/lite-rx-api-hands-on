@@ -70,12 +70,14 @@ public class Part09Adapt {
 
 	// TODO Adapt Mono to RxJava Single
 	Single<User> fromMonoToSingle(Mono<User> mono) {
-		return null;
+
+		return Single.fromPublisher(mono);
 	}
 
 	// TODO Adapt RxJava Single to Mono
 	Mono<User> fromSingleToMono(Single<User> single) {
-		return null;
+
+		return Mono.from(single.toFlowable());
 	}
 
 //========================================================================================
