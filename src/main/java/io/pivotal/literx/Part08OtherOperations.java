@@ -39,7 +39,7 @@ public class Part08OtherOperations {
 
 	// TODO Convert the input Flux<User> to a Mono<Void> that represents the complete signal of the flux
 	Mono<Void> fluxCompletion(Flux<User> flux) {
-		return null;
+		return flux.then();
 	}
 
 //========================================================================================
