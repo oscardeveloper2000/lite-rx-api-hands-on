@@ -32,7 +32,7 @@ public class Part08OtherOperations {
 
 	// TODO Return the flux which returns the first value faster
 	Flux<User> useFastestFlux(Flux<User> flux1, Flux<User> flux2) {
-		return null;
+		return Flux.first(flux1, flux2);
 	}
 
 //========================================================================================
