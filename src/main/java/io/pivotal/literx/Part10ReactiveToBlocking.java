@@ -22,7 +22,7 @@ public class Part10ReactiveToBlocking {
 
 	// TODO Return the users contained in that Flux
 	Iterable<User> fluxToValues(Flux<User> flux) {
-		return null;
+		return flux.toIterable();
 	}
 
 }
